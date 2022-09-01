@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Welcome {{ user.username }} </h1>
+	<form method = "POST">
+		{% csrf_token %}
+		<input type="number" name="num" placeholder="Enter Number" required/>
+		<br/><br/>
+		<input type="submit" value="Find">
+		<br/><br/>
+	</form>
+	{{ msg }}
+{% endblock %}
